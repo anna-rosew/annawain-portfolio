@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 
 import ThemeProvider from "@/components/layout/ThemesProvider";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Head from "next/head";
+import MainNav from "@/components/layout/MainNav";
 
 export const metadata: Metadata = {
   title: "Anna Wain's Portfolio",
@@ -26,16 +17,40 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          href="/favicon-180x180.png"
+          sizes="180x180"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+      </Head>
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <nav className="w-full">
+            <MainNav />
+          </nav>
+          <main className="h-screen w-screen overflow-hidden flex">
+            <div className="w-full">{children}</div>
+          </main>
+          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
         </ThemeProvider>
       </body>
     </html>

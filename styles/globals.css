@@ -74,49 +74,34 @@ body {
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[var(--background)] text-[var(--foreground)];
+  }
+
+  h1 {
+    @apply font-pt-sans font-normal text-2xl ml-5 mb-px;
+    @apply sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  h2 {
+    @apply font-pt-sans font-normal text-xs opacity-80 ml-5 mb-1;
+    @apply sm:text-sm md:text-base lg:text-lg xl:text-xl;
+  }
+
+  h4 {
+    @apply font-pt-sans font-normal text-xs opacity-80 ml-5 mb-1 p-1;
+    @apply sm:text-sm md:text-base lg:text-lg xl:text-xl;
+  }
+
+  p {
+    @apply font-quicksand font-normal;
+    @apply sm:text-sm md:text-base lg:text-lg xl:text-xl;
   }
 }
 
 @layer components {
   .navbar-link {
-    @apply font-medium text-muted-foreground transition-colors hover:text-primary;
+    @apply uppercase relative cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black dark:before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0;
   }
-}
-
-/* Heading Styles */
-h1 {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 30px;
-  margin-left: 20px;
-  margin-bottom: 1px;
-}
-
-h2 {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  opacity: 80%;
-  margin-left: 20px;
-  margin-bottom: 2.5px;
-}
-
-h4 {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  opacity: 80%;
-  margin-left: 20px;
-  margin-bottom: 2.5px;
-  padding: 5px;
-}
-
-/* Body Paragraph Styling */
-p {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }

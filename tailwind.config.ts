@@ -7,9 +7,22 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: ["class", "class"],
+  darkMode: "class", // Valid for dark mode with class-based toggle
   theme: {
     extend: {
+      animation: {
+        marquee: "marquee 30s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(100%)" }, // Start off-screen on the right
+          "100%": { transform: "translateX(-100%)" }, // End off-screen on the left
+        },
+      },
+      fontFamily: {
+        "pt-sans": ["PT Sans", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -59,5 +72,5 @@ export default {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [tailwindcssAnimate], // Make sure the plugin is installed
 } satisfies Config;
