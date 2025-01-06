@@ -22,7 +22,7 @@ const detailsItems = [
   },
   {
     title: "SheCodes",
-    linkText: "Qualifications",
+    linkText: "/Qualifications",
     link: "https://www.shecodes.io/graduates/68516-anna-rose-wain",
   },
 ];
@@ -53,12 +53,12 @@ export default function Home() {
             key={index}
             className="bg-gray-200 p-4 rounded-lg w-full md:w-auto"
           >
-            <h2 className="text-lg mb-2">{item.title}</h2>
+            <h2 className="text-lg mb-2 text-left">{item.title}</h2>
             <Link
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className=" underline"
+              className=" underline text-left"
             >
               {item.linkText}
             </Link>
