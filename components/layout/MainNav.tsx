@@ -4,9 +4,12 @@ import Link from "next/link";
 
 const MainNav = () => {
   return (
-    <nav className="flex justify-between">
+    <div className="flex justify-between">
       <Link href="/">
-        <h2>Anna-Rose Wain</h2>
+        <h2 className="font-bold md:text-2xl">
+          Anna-Rose <br />
+          Wain
+        </h2>
       </Link>
       <Link href="work">WORK</Link>
       <Link
@@ -16,7 +19,7 @@ const MainNav = () => {
         <div className="link-text">CONTACT</div>
       </Link>
       <ToggleMode />
-    </nav>
+    </div>
   );
 };
 
