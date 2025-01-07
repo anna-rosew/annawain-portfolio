@@ -15,8 +15,8 @@ export default {
       },
       keyframes: {
         marquee: {
-          "0%": { transform: "translateX(100%)" }, // Start off-screen on the right
-          "100%": { transform: "translateX(-100%)" }, // End off-screen on the left
+          "0%": { transform: "translateX(0)" }, // Start at the beginning
+          "100%": { transform: "translateX(-50%)" }, // Move halfway through the duplicated content
         },
       },
       fontFamily: {

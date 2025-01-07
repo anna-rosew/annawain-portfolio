@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 
 // List of values for the marquee
 const marqueeItems = [
@@ -34,17 +35,26 @@ const marqueeItems = [
 ];
 
 const Marquee = () => {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
-    <div className="relative overflow-hidden [--offset:10vw] [--move-initial:calc(-25%_+_var(--offset))] [--move-final:calc(-50%_+_var(--offset))] group bg-[#e8daef] border-t border-b border-black">
+    <div
+      className="relative overflow-hidden bg-[#e8daef] border-t border-b border-black"
+      onMouseEnter={() => setIsPaused(true)} // Pause on hover
+      onMouseLeave={() => setIsPaused(false)} // Resume when hover ends
+    >
       <div
-        className="w-full flex min-w-full relative transform-[translate3d(var(--move-initial),0,0)] animate-marquee [animation-play-state:running] group-hover:[animation-play-state:paused] gap-7 py-2"
+        className={`flex w-[200%] gap-7 py-2 ${
+          isPaused
+            ? "[animation-play-state:paused]"
+            : "[animation-play-state:running]"
+        } animate-marquee`}
         aria-hidden="true"
       >
-        {/* Map over marqueeItems to display each item */}
-        {marqueeItems.map((item, index) => (
+        {[...marqueeItems, ...marqueeItems].map((item, index) => (
           <span
             key={index}
-            className="flex justify-around items-center flex-shrink-0"
+            className="flex justify-around items-center flex-shrink-0 whitespace-nowrap px-4"
           >
             <p>{item}</p>
           </span>
