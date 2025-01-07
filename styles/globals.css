@@ -80,7 +80,7 @@ body {
   }
 
   h1 {
-    @apply font-pt-sans font-normal text-2xl ml-5 mb-px;
+    @apply font-pt-sans font-normal text-2xl mb-px;
     @apply sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
   }
 

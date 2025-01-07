@@ -47,8 +47,8 @@ export default function RootLayout({
           <nav className="w-full">
             <MainNav />
           </nav>
-          <main className="h-screen w-screen overflow-hidden flex">
-            <div className="w-full">{children}</div>
+          <main className="flex flex-col">
+            <div className="w-fullh-[100vh] overflow-hidden">{children}</div>
           </main>
           <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
         </ThemeProvider>
