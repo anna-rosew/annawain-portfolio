@@ -85,7 +85,7 @@ body {
   }
 
   h2 {
-    @apply font-pt-sans font-normal text-xs opacity-80 ml-5 mb-1;
+    @apply font-pt-sans font-normal text-xs opacity-80 mb-1;
     @apply sm:text-sm md:text-base lg:text-lg xl:text-xl;
   }
 
