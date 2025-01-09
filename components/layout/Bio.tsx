@@ -11,7 +11,7 @@ import code from "@/public/icons/code.svg";
 import www from "@/public/icons/www.svg";
 import plane from "@/public/icons/airplane.svg";
 import wave from "@/public/icons/wave.svg";
-import ContactButton from "../ui/contactButton";
+import ContactButton from "../common/contactButton";
 
 const Bio = () => {
   const [isMobile, setIsMobile] = useState(false);
