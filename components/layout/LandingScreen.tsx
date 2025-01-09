@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import emoji from "@/public/icons/robot.svg";
 import arrow from "@/public/icons/arrow.svg";
-import EmojiIcon from "@/public/icons/robot.svg";
+import EmojiIcon  from "@/public/icons/robot.svg";
 
 const detailsItems = [
   {
