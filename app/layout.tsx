@@ -3,6 +3,7 @@ import "../styles/globals.css";
 
 import ThemeProvider from "@/components/layout/ThemesProvider";
 import MainNav from "@/components/layout/MainNav";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Anna Wain's Portfolio",
@@ -31,7 +32,9 @@ export default function RootLayout({
           <main className="flex flex-col">
             <div>{children}</div>
           </main>
-          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+            <Footer />
+          </footer>
         </ThemeProvider>
       </body>
     </html>
