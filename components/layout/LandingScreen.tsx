@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import emoji from "@/public/icons/robot.svg";
 import arrow from "@/public/icons/arrow.svg";
+import EmojiIcon from "@/public/icons/robot.svg";
 
 const detailsItems = [
   {
@@ -33,7 +34,12 @@ const LandingScreen = () => {
       <div className="flex flex-col h-screen">
         {/* Top Content Section */}
         <div className="flex flex-col justify-center items-center pt-4 lg:pt-6 px-4 lg:mx-[30vw] flex-shrink-0">
-          <Image src={emoji} alt="Robot Gif" className="m-auto h-[70px]" />
+          <Image
+            src={emoji}
+            alt="Robot Gif"
+            className="m-auto h-[70px] text-black dark:text-white"
+          />
+          <EmojiIcon className="m-auto h-[70px] text-black dark:text-white" />
           <h1 className="text-center text-l lg:text-5xl font-semibold">
             Hi, I&apos;m Anna! <br />
           </h1>

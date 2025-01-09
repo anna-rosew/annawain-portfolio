@@ -31,7 +31,7 @@ const Bio = () => {
 
   return (
     <div className="text-white p-10" id="about">
-      <div className={isMobile ? "block" : "hidden"}>
+      <div className={isMobile ? "block bg-black" : "hidden"}>
         <div className="bg-black">
           {/* Mobile Version */}
           <p className="w-[70%] font-normal text-[36px] mb-8">
@@ -169,7 +169,7 @@ const Bio = () => {
       </div>
 
       {/* Desktop Version */}
-      <div className={isMobile ? "hidden" : "block"}>
+      <div className={isMobile ? "hidden" : "block bg-black"}>
         <div className="bg-black">
           <p className="w-[70%] font-normal text-[36px] mb-8">
             <span className="flex items-center mb-5">
